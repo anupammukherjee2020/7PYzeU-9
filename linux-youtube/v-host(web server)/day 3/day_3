@@ -1,0 +1,18 @@
+day 3 
+
+mysql 
+
+website : https://www.mysql.com/
+
+Database
+A database is simply a collection of structured data. Think of taking a selfie: you push a button and capture an image of yourself. Your photo is data, and your phone’s gallery is the database. A database is a place in which data is stored and organized. The word “relational” means that the data stored in the dataset is organized as tables. Every table relates in some ways. If the software doesn’t support the relational data model, just call it DBMS.
+
+Open source
+Open source means that you’re free to use and modify it. Anybody can install the software. You can also learn and customize the source code to better accommodate your needs. However, The GPL (GNU Public License) determines what you can do depending on conditions. The commercially licensed version is available if you need more flexible ownership and advanced support.
+
+Client-server model
+Computers that install and run RDBMS software are called clients. Whenever they need to access data, they connect to the RDBMS server. That’s the “client-server” part.
+
+MySQL is one of many RDBMS software options. RDBMS and MySQL are often thought to be the same because of MySQL’s popularity. A few big web applications like Facebook, Twitter, YouTube, Google, and Yahoo! all use MySQL for data storage purposes. Even though it was initially created for limited usage, it is now compatible with many important computing platforms like Linux, macOS, Microsoft Windows, and Ubuntu.
+
+mysqladmin -p -u root version

@@ -1,0 +1,36 @@
+day 5 
+
+phpmyadmin
+
+
+https://www.phpmyadmin.net/
+
+
+
+1  apt update
+    2  sudo apt install apache2
+    3  /var/www/html
+    4  cd /var/www/html
+    5  ls
+    6  eche "apache webserver test page " > index.html 
+    7  eche " " > index.html 
+    8  echo " this is test page" > index.html 
+    9  nano /etc/apache2/sites-enabled/000-default.conf
+   10  /etc/init.d/apache2 restart
+   11  service apache2 status
+   12  apt install mysql
+   13  apt install mysql*
+   14  apt install mysql5.6*
+   15  apt install mysql-server
+   16  mysql -v
+   17  mysql_secure_installation
+   18  service mysql status
+   19  mysqladmin -p -u root version
+   20  sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
+   21  sudo nano /etc/apache2/mods-enabled/dir.conf
+   22  nano /etc/apache2/mods-enabled/dir.conf
+   23  sudo nano /var/www/html/info.php
+   24  sudo apt-get update
+   25  sudo apt-get install phpmyadmin php-mbstring php-gettext
+   26  sudo apt-get install  php-mbstring php-gettext
+

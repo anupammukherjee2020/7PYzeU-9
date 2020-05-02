@@ -1,0 +1,34 @@
+day 2 apache 
+
+reference : https://ubuntu.com/tutorials/install-and-configure-apache#5-activating-virtualhost-file
+
+
+
+Apache is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure. It can be highly customized to meet the needs of many different environments by using extensions and modules. Most WordPress hosting providers use Apache as their web server software. However, WordPress can run on other web server software as well.
+
+
+অ্যাপাচি হ'ল সর্বাধিক ব্যবহৃত ওয়েব সার্ভার সফটওয়্যার। অ্যাপাচি সফটওয়্যার ফাউন্ডেশন দ্বারা বিকাশিত এবং রক্ষণাবেক্ষণ করা, অ্যাপাচি একটি মুক্ত ওপেন সোর্স সফ্টওয়্যার বিনামূল্যে উপলব্ধ। এটি বিশ্বের সমস্ত ওয়েবসার্সের 67% এ চলে। এটি দ্রুত, নির্ভরযোগ্য এবং সুরক্ষিত। এটি এক্সটেনশন এবং মডিউল ব্যবহার করে বিভিন্ন বিভিন্ন পরিবেশের চাহিদা মেটাতে অত্যন্ত কাস্টমাইজ করা যায়। বেশিরভাগ ওয়ার্ডপ্রেস হোস্টিং সরবরাহকারী তাদের ওয়েব সার্ভার সফ্টওয়্যার হিসাবে অ্যাপাচি ব্যবহার করে। তবে ওয়ার্ডপ্রেস অন্যান্য ওয়েব সার্ভার সফটওয়্যারটিতেও চালাতে পারে।
+
+offical website : https://httpd.apache.org/
+
+history : The Apache HTTP Server ("httpd") was launched in 1995 and it has been the most popular web server on the Internet since April 1996. It has celebrated its 25th birthday as a project in February 2020.
+
+install :
+
+sudo apt update
+sudo apt install apache2
+
+By default, Apache comes with a basic site (the one that we saw in the previous step) enabled. We can modify its content in /var/www/html or settings by editing its Virtual Host file found in /etc/apache2/sites-enabled/000-default.conf
+
+.
+
+
+
+service apache2 status
+
+
+
+
+
+
+

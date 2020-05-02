@@ -1,0 +1,31 @@
+day 1 web server
+
+********host multiple Domain on one Virtual server*******
+
+learning objectives
+
+1. setup and host multiple website on a single virtula server 
+
+2. we will use AWS , but this ca be down with any cloude hosting provider 
+
+3. doploy ubuntu  
+
+4. install LAMP stack on server (Apache , mysql php )
+
+5. install phpmyadmin
+
+
+
+
+
+** (if you windowd then use putty )
+
+6. configer virtual host on our server for each domain
+
+7. manage name server on our domain registare admin palnal 
+
+8. configer a dnas zone file on the route 53
+
+9. configure SSl certificates for each domain we are hosting on our server using let's encriypt.
+
+ 
