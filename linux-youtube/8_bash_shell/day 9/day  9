@@ -1,0 +1,10 @@
+sleep 
+
+read a file : 
+
+#while loops 
+
+     while read p
+       do 
+        echo $p
+     dome < hello.sh

@@ -1,0 +1,17 @@
+Migrating a local MySQL Database to RDS
+
+
+1. lamp install (mysql 5.6)
+
+2. creat a DB name test > show on phpmyadmin 
+
+3. dump > test DB 
+
+4. create RDS : (mysql 5.6)
+
+5. phpmyadmin show RDS DB 
+
+6. restoredb test 
+ 
+
+

@@ -1,0 +1,8 @@
+what is ngrock? 
+
+lab : https://www.sitepoint.com/use-ngrok-test-local-site/
+
+
+
+create a docker contaner expos 8080 port and run ngrock #ngrock http 8080
+

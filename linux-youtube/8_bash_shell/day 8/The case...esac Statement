@@ -1,0 +1,38 @@
+
+The case...esac Statement
+
+
+case word in
+   pattern1)
+      Statement(s) to be executed if pattern1 matches
+      ;;
+   pattern2)
+      Statement(s) to be executed if pattern2 matches
+      ;;
+   pattern3)
+      Statement(s) to be executed if pattern3 matches
+      ;;
+   *)
+     Default condition to be executed
+     ;;
+esac
+
+
+#!/bin/bash 
+
+#ver=valu
+age=$1
+
+echo "jon , dig , sara"
+
+  case $age in 
+       "jon")
+       echo " age of $age is 10 years";;
+       "dig" ) 
+       echo " age of $age is 20 years";;
+       "sara")
+       echo " age of $age is 25 years";;
+       *)
+       echo "unknown names";;
+  esac
+
