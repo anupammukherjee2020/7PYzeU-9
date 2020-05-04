@@ -1,0 +1,23 @@
+day 6 
+
+
+what is vhost
+
+Virtual hosting is a method for hosting multiple websites on a single machine. There are two types of virtual hosting: Name-based virtual hosting and IP-based virtual hosting. IP-based virtual hosting is a technique to apply different directives based on the IP address and port a request is received on. You can assign a separate IP for each website on a single server using IP-based virtual hosting. This is mainly used to host different websites on different ports or IP addresses.
+
+
+lsb : 
+
+
+create 2 v-host 
+
+1.cd /var/www/html/
+   30  mkdir test.com test2.com
+   31  cd test.com/
+   32  echo "page for test " > index.html
+   33  ls
+   34  cd ..
+   35  cd test2.com/
+   36  echo "page for test2 " > index.html
+2.
+a2ensite -- command 
