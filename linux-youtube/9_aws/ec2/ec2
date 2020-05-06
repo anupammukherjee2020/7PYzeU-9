@@ -1,0 +1,90 @@
+EC2
+
+----------
+
+Dashboard: 
+---------
+
+event : 
+
+tags:
+
+report:
+
+limits:
+
+instances:
+---------
+instances
+
+instance type 
+
+launch templates
+
+spot requests
+
+savings plans 
+
+
+সঞ্চয় পরিকল্পনা একটি নমনীয় মূল্যের মডেল যা 1 বা 3 বছরের মেয়াদের জন্য ধারাবাহিক পরিমাণ ব্যবহারের (প্রতি ঘণ্টায় / ঘন্টা পরিমাপ করা হয়) প্রতিশ্রুতির বিনিময়ে ইসি 2, ফারগেট এবং ল্যাম্বদা ব্যবহারের উপর কম দাম সরবরাহ করে। সঞ্চয় পরিকল্পনগুলি আপনাকে এমন গণনা বিকল্পটি ব্যবহার করার নমনীয়তা সরবরাহ করে যা আপনার প্রয়োজন অনুসারে সর্বোত্তমভাবে স্যুট করে এবং স্বয়ংক্রিয়ভাবে অর্থ সাশ্রয় করে, সবই এক্সচেঞ্জ বা পরিবর্তন না করেই করে save আপনি যখন কোনও সঞ্চয় পরিকল্পনার জন্য সাইন আপ করেন, তখন আপনার প্রতিশ্রুতি অবধি আপনার ব্যবহারের জন্য ছাড়যুক্ত সঞ্চয় পরিকল্পনার দাম নেওয়া হবে।
+
+সঞ্চয় পরিকল্পনা আপনাকে নির্দিষ্ট উদাহরণ কনফিগারেশন বা গণনা পরিষেবাদির প্রতিশ্রুতি না দিয়ে গণনার ব্যবহারের (যেমন $ 10 / ঘন্টা) প্রতিশ্রুতিবদ্ধ করে আপনার বিলটি সহজেই হ্রাস করতে দেয়। এডাব্লুএস দুটি ধরণের সঞ্চয় পরিকল্পনা করে - গণনা সঞ্চয় পরিকল্পনা এবং ইসি 2 ইনস্ট্যান্স সঞ্চয় পরিকল্পনা Sav
+
+
+
+reserved instances
+
+Dedicated host 
+
+scheduled instances
+
+capacity reservations
+
+images:
+-------
+
+amis
+
+bundle tasks 
+
+Elastic block store:
+-------------------
+
+volumes 
+
+snapshots 
+
+lifecycle manager 
+ 
+Network & security:
+------------------
+
+security groups 
+
+elastic ip 
+
+placement group 
+
+key pairs
+
+network interfaces
+
+load balancing:
+---------------
+load balancing
+
+target group
+
+Auto scaling :
+
+launch configerations 
+
+auto scaling group 
+
+ 
+How do I stop and start my instances using the AWS Instance Scheduler?
+
+https://aws.amazon.com/premiumsupport/knowledge-center/stop-start-instance-scheduler/
+
+
+
