@@ -1,0 +1,10 @@
+ssh-keygen - Generate a New SSH Key
+
+ssh keyless authentication in linux
+
+
+https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
+
+ssh-keygen - creates a key pair for public key authentication
+
+ssh-copy-id - configures a public key as authorized on a server

@@ -1,0 +1,42 @@
+Understanding the Linux Kernel Scheduler
+
+
+একটি কার্নেল শিডিয়ুলার কার্নেলের একটি ইউনিট যা পরবর্তী সঞ্চালনের জন্য সমস্ত চলমান প্রক্রিয়াগুলির মধ্যে সবচেয়ে উপযুক্ত প্রক্রিয়া নির্ধারণ করে; এটি একটি সিস্টেমে চলমান প্রক্রিয়াগুলির মধ্যে প্রসেসরের সময় বরাদ্দ করে। একটি চলমান প্রক্রিয়া এমন একটি যা কেবল সিপিইউ সময়ের জন্য অপেক্ষা করে থাকে, এটি কার্যকর করার জন্য প্রস্তুত।
+
+শিডিয়ুলারটি লিনাক্সে মাল্টিটাস্কিংয়ের মূল গঠন করে, সিস্টেমের মধ্যে চলমান প্রক্রিয়াগুলির মধ্যে চয়ন করার জন্য একটি অগ্রাধিকার ভিত্তিক শিডিয়ুলিং অ্যালগরিদম ব্যবহার করে। এটি সর্বাধিক প্রাপ্য সেইসাথে সিপিইউ সময়ের প্রয়োজনের ভিত্তিতে প্রক্রিয়াগুলিকে স্থান দেয়।
+
+Understanding Process Priority and Nice Value
+
+কার্নেল প্রক্রিয়া অগ্রাধিকার সহ প্রক্রিয়া সম্পর্কে প্রচুর পরিমাণে তথ্য সঞ্চয় করে যা কেবল কোনও প্রক্রিয়ার সাথে সংযুক্ত সময়সূচী অগ্রাধিকার। উচ্চ অগ্রাধিকার সহ প্রক্রিয়াগুলি নিম্ন অগ্রাধিকারপ্রাপ্তদের আগে কার্যকর করা হবে, যখন একই অগ্রাধিকার সহ প্রক্রিয়াগুলি পরের বারে একবার নির্ধারিত হয়।
+https://www.tecmint.com/set-linux-process-priority-using-nice-and-renice-commands/
+
+
+লিনাক্সে মোট 140 টি অগ্রাধিকার এবং দুটি স্বতন্ত্র অগ্রাধিকার রেঞ্জ প্রয়োগ করা হয়েছে। প্রথমটি হ'ল একটি সুন্দর মান (কমনীয়তা) যা -20 (সর্বোচ্চ অগ্রাধিকার মান) থেকে শুরু করে 19 (সর্বনিম্ন অগ্রাধিকার মান) এবং ডিফল্ট 0 হয়, আমরা এই গাইডটিতে এটি উন্মোচন করব। অন্যটি হ'ল রিয়েল-টাইম অগ্রাধিকার, যা ডিফল্টরূপে 1 থেকে 99 এর মধ্যে থাকে, তারপরে 100 থেকে 139 পর্যন্ত ব্যবহারকারী-স্পেসের জন্য বোঝানো হয়।
+
+লিনাক্সের একটি গুরুত্বপূর্ণ বৈশিষ্ট্য হ'ল গতিশীল অগ্রাধিকার-ভিত্তিক সময়সূচী, যা আপনার প্রয়োজনের উপর নির্ভর করে প্রক্রিয়াগুলির দুর্দান্ত মানটিকে পরিবর্তন (বাড়ানো বা হ্রাস করা) দেয়, যেমন আমরা পরে দেখব।
+
+How to Check Nice Value of Linux Processes
+
+
+To see the nice values of processes, we can use utilities such as ps, top or htop.
+
+To view processes nice value with ps command in user-defined format (here the NI the column shows the niceness of processes).
+
+#ps -eo pid,ppid,ni,comm
+
+
+Difference Between PR or PRI and NI
+
+From the top and htop outputs above, you’ll notice that there is a column called PR and PRI receptively which shows the priority of a process.
+
+This, therefore, means that:
+
+NI – is the nice value, which is a user-space concept, while
+PR or PRI – is the process’s actual priority, as seen by the Linux kernel.
+How To Calculate PR or PRI Values
+Total number of priorities = 140
+Real time priority range(PR or PRI):  0 to 99 
+User space priority range: 100 to 139
+
+
+
