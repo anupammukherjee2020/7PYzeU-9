@@ -1,0 +1,47 @@
+What is OpenSSH
+
+
+https://www.linux.org/threads/openssh.4182/
+
+
+
+Working with OpenSSH
+
+Back when the Internet was a big, happy family with only a hundred or so university servers connected to each other, it was practical and feasible to login to a remote computer using an plain-text protocol like telnet. This is, for reasons that should be obvious to most all Internet users, no longer advisable. For the most part, nobody logs in to a remote computer this way. They use a tool like OpenSSH.
+
+What is OpenSSH?
+
+OpenSSH is a free version of SSH Communications Security's SSH protocol. It is essentially a suite of tools for making secure connections. First, there is a daemon, sshd, which listens for connections from outside and performs authentication of those connections. There are three main client programs, ssh, the client shell, scp, a command-line program for copying from one machine to another and sftp, another program for copying in an ftp-like manner. There are also various programs to manage encryption keys that are used by clients and server.
+
+Installation of OpenSSH
+
+So that your system can both receive and make connections via OpenSSH, you need to have the following packages installed:
+Code:
+openssh
+openssh-server
+openssh-clients
+All major distributions have these packages. In fact, they are normally installed by default.
+
+OpenSSH Configuration
+The main configuration file is /etc/ssh/sshd_config. There are a few changes that you should make to this file before you open up your machine to connections from the outside world.
+
+First, its not a good idea to permit root logins to any machine. So that this cannot occur, make sure to change the file (or uncomment the line) so that the following line appears:
+Code:
+PermitRootLogin No
+You may also want to allow remote machines to open X sessions. To do this, change the file (or uncomment the line) so that the following line appears:
+Code:
+X11Forwarding yes
+* Most administrators feel that a Linux machine providing services like FTP, mail and Apache should not be running X. As a general rule, the more services a machine runs, the more risk of exploits. If the server isn't doubling as aworkstation, it really shouldn't be running X. This will also save on resources as well.
+
+Bending the Rules
+
+Normally, to use 'ssh' or 'scp', you'd have to enter a password. There is a simple way to get around this. You may be asking yourself, however: why would you want to get around this? One reason is for sending backup copies automagically to other machines. Here's how to use scp without a password to send files:
+First, create a user account on one machine. For this example, let's call it 'bkups'. Then login as 'bkups' and create a public key:
+
+Code:
+ssh-keygen -t rsa
+To this, just press ENTER to everything. This will have created two files: id_rsa and id_rsa.pub in the directory /home/bkups/.ssh. Now, login to the other machine and create another user called 'bkups'. Now, go back to the to the first machine, from where you want to send the backup files. You now need to copy the file /home/bkups/.ssh/id_rsa.pub back to the other machine. For best results, this should not be done as the 'bkups' user. It is easiest to to this as 'root', but if you can't 'scp' it as root, then have root make a copy and chown it to a normal user and 'scp' it to the other machine. Then login to the other machine and get 'root' privileges.
+
+Copy the file to /home/bkups/.ssh/authorized_keys and chown it to the 'bkups' user. Now, go back to the first machine again and try to use 'scp' to copy a file from 'bkups' on this machine to 'bkups' on the second. The first time it will ask you if you want to connect, but it won't ask for your password. Every subsequent time it will just copy the file without asking for a password. This makes automating your backups very easy.
+
+
